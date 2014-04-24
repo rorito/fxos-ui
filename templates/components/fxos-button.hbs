@@ -1,8 +1,7 @@
-<link href="../bower_components/building-blocks/style/buttons.css" rel="stylesheet" type="text/css">
+<link href="/bower_components/building-blocks/style/buttons.css" rel="stylesheet" type="text/css">
 
-{{log disabled}}
 {{#if disabled}}
-    {{fxbutton text class disabled}}
+    <button disabled {{bind-attr class="cls"}}>{{text}}</button>
 {{else}}
-    {{fxbutton text class}}
+    <button {{bind-attr class="cls"}}>{{text}}</button>
 {{/if}}
