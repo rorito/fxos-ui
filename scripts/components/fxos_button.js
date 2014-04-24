@@ -1,4 +1,4 @@
-Myapp.FxosButtonComponent = Ember.Component.extend({
+FxosUI.FxosButtonComponent = Ember.Component.extend({
     click: function() {
         this.sendAction('action');
     },

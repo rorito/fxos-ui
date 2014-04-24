@@ -1,4 +1,4 @@
-Myapp.FxosActionmenuComponent = Ember.Component.extend({
+FxosUI.FxosActionmenuComponent = Ember.Component.extend({
   actions: {
     cancelAction: function(){
       this.hide();
