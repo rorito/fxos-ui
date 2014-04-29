@@ -3,21 +3,6 @@ fxos-ui
 
 Provides Ember Web Components of common FirefoxOS UI widgets for use in [RecRoom]. Built using FirefoxOS [Building Blocks] from Telefonica.
 
-  - Type some Markdown text in the left window
-  - See the HTML in the right
-  - Magic
-
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site] [1]:
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable 
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.  
 
 Version
 ----
@@ -52,7 +37,7 @@ An action menu presents a list of actions, related to the app's content, from wh
  * Selecting one of the actions.
  * Tapping the "Cancel" button.
 
-[[examples/images/actionmenu.png]]
+![actionmenu image](examples/images/actionmenu.png)
 
 ####Example Usage
 ```sh
@@ -105,7 +90,7 @@ Buttons perform an action when tapped by the user. Firefox OS has a wide variety
 
 Default buttons are used when there are only a few actions and a list isn't needed. A primary action button uses a special highlight color to improve visibility and simplify the choice for the user. Buttons that have potentially negative consequences, such as deleting an item, are highlighted in red.    
 
-[[examples/images/defaultbuttons.png]]
+![default buttons image](examples/images/defaultbuttons.png)
 
 ####Example Usage
 ```sh
@@ -121,7 +106,7 @@ Attributes
 
 Disabled buttons do not respond to users' taps.
 
-[[examples/images/disabledbuttons.png]]
+![disabled buttons image](examples/images/disabledbuttons.png)
 
 ####Example Usage
 ```sh
