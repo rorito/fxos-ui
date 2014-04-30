@@ -56,7 +56,7 @@ Myapp.TestactionmenuController = Ember.ObjectController.extend({
 	title: "This is the title",
 	actionMenuButtonMapping: [
 		{
-			"buttonName": "Button 1", 
+			"buttonName": "Button 1",
 			"buttonAction": function(){
                 alert("Button 1 click");
             }
@@ -82,13 +82,12 @@ Buttons perform an action when tapped by the user. Firefox OS has a wide variety
 
 #### Characteristics
 * Buttons have two components: a visual target and a hit target. The visual target is the button the user sees on the screen. The hit target is an invisible area that responds to the tap. To minimize tapping errors, the hit target is typically larger than the visual target.
-
 * Buttons have two states: normal and pressed.
 * Disabled buttons are buttons that do not respond to a tap. Disabled buttons are dimmed.
 
 #### Default
 
-Default buttons are used when there are only a few actions and a list isn't needed. A primary action button uses a special highlight color to improve visibility and simplify the choice for the user. Buttons that have potentially negative consequences, such as deleting an item, are highlighted in red.    
+Default buttons are used when there are only a few actions and a list isn't needed. A primary action button uses a special highlight color to improve visibility and simplify the choice for the user. Buttons that have potentially negative consequences, such as deleting an item, are highlighted in red.
 
 ![default buttons image](examples/images/defaultbuttons.png)
 
@@ -118,6 +117,55 @@ Disabled buttons do not respond to users' taps.
 {{fxos-button text="Danger" disabled="true"}}
 ```
 
+## Confirm
+A confirmation prompt is used to confirm an action or inform the user of an event. Confirmation prompts are frequently used to confirm tasks that cannot be undone, such as permanently deleting an item. Confirmation prompts are designed to disrupt tasks and, as a result, should be used sparingly.
+
+#### Characteristics
+* Confirmation prompts are currently modal - they occupy the entire screen, and require user input to close them.
+
+##### A confirmation prompt consists of:
+* Title (optional)
+* Body
+* Icon (optional)
+* A Confirmation input button, whose label can be customized
+* An optional Cancel input button, whose label can be customized
+
+#### Default
+![confirm default image](examples/images/confirmdefault.png)
+
+**Note:** Use the attribute formsubmit="true" in case you don't want your form to be submitted.
+
+```sh
+{{fxos-confirm
+    formsubmit="true"
+    title="Confirm Title"
+    body="Do you want to download and install this application?"
+    cancelButtonText="Cancel"
+    confirmButtonText="Delete"
+    confirmButtonClass="danger"
+    confirmButtonEventName="confirmScreenTestEvent"
+}}
+```
+
+#### Confirm with content
+![confirm with content image](examples/images/confirmcontent.png)
+
+```sh
+{{fxos-confirm
+    formsubmit="true"
+    title="Confirm Title"
+    message="Do you want to download and install this application?"
+    cancelButtonText="Cancel"
+    confirmButtonText="Yes"
+    confirmButtonClass="recommend"
+    confirmButtonEventName="confirmScreenTestEvent"
+
+    icon_src="http://buildingfirefoxos.com/images/BB/app_logo.png"
+    icon_alt_text="Lightbox Icon"
+    app_name="Lightbox"
+    app_creator="Lightbox Enterprises LLC."
+}}
+```
 
 TODO
 * Action menu - switch to events instead of action wiring
@@ -126,5 +174,3 @@ TODO
 
 [recroom]:https://github.com/mozilla/recroom
 [Building Blocks]:http://buildingfirefoxos.com/
-
-    

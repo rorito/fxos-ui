@@ -1,0 +1,24 @@
+<link href="/bower_components/building-blocks/style/confirm.css" rel="stylesheet" type="text/css">
+
+<form role="dialog" data-type="confirm">
+    <section>
+        <h1>{{title}}</h1>
+        {{#if icon_src}}
+            <p>
+                <img {{bind-attr src="icon_src"}} {{bind-attr alt="icon_alt_text"}} width="55" height="55">
+                {{#if app_name}}<strong>{{app_name}}</strong>{{/if}}
+                {{#if app_creator}}<small>{{app_creator}}</small>{{/if}}
+            </p>
+        {{/if}}
+        <p>{{body}}</p>
+    </section>
+    <menu>
+        {{#if formsubmit}}
+            <button {{action "cancelButton"}}>{{cancelButtonText}}</button>
+            <button {{bind-attr class="confirmButtonClass"}} {{action "confirmButton"}}>{{confirmButtonText}}</button>
+        {{else}}
+            <button type="button" {{action "cancelButton"}}>{{cancelButtonText}}</button>
+            <button type="button" {{bind-attr class="confirmButtonClass"}} {{action "confirmButton"}}>{{confirmButtonText}}</button>
+        {{/if}}
+    </menu>
+</form>
