@@ -184,7 +184,7 @@ Used for labeling the active view and providing top-level navigation and inputs 
 * class (optional) - Example: class="skin-dark"
 * title (required) - Example: title="Messages"
 * title_count (optional) - Example: title_count="2"
-* subheader_text (optional) Example: subheader_text="Subheader text"
+* subheader_text (optional) - Example: subheader_text="Subheader text"
 * back (optional) - Example: back="true"
 * backEventName (optional) - Example: backEventName="headerBackButtonEvent"
 * menu (optional) - Example: menu="true"
@@ -243,6 +243,7 @@ First Skinned Menu Example
 {{fxos-header
     class="skin-dark"
     title="Song title"
+    subheader_text="Subheader text"
     back="true"
     backEventName="headerBackButtonEvent"
 }}
@@ -253,6 +254,7 @@ Second Skinned Menu Example
 {{fxos-header 
     class="skin-organic"
     title="Settings"
+    subheader_text="Subheader text"
     back="true"
     backEventName="headerBackButtonEvent"
 }}
@@ -264,6 +266,7 @@ TODO
 * Action menu - switch to events instead of action wiring
 * Button - dark style
 * Button - list buttons
+* Drawer css messed up
 
 [recroom]:https://github.com/mozilla/recroom
 [Building Blocks]:http://buildingfirefoxos.com/
