@@ -167,6 +167,99 @@ A confirmation prompt is used to confirm an action or inform the user of an even
 }}
 ```
 
+## Headers
+
+Used for labeling the active view and providing top-level navigation and inputs for the active view.Less
+
+#### Characteristics
+* A header is a horizontal bar the full width of the screen, which appears at the top of the screen in most apps.
+* Headers float above content, with the option of flowing with content in special instances, such as in the Browser app.
+* The heading's text provides the name of the current view.
+* The heading may optionally include additional text; for example, in an email app, the number of unread messages may be displayed.
+* Headers may include inputs for navigating and manipulating the current view.
+* Most apps (full-screen games being an obvious exception) have a header.
+
+
+#### Attributes
+* class (optional) - Example: class="skin-dark"
+* title (required) - Example: title="Messages"
+* title_count (optional) - Example: title_count="2"
+* subheader_text (optional) Example: subheader_text="Subheader text"
+* back (optional) - Example: back="true"
+* backEventName (optional) - Example: backEventName="headerBackButtonEvent"
+* menu (optional) - Example: menu="true"
+* edit (optional) - Example: edit="true"
+* editEventName (optional) - Example: editEventName="headerEditButtonEvent"
+* add (optional) - Example: add="true"
+* addEventName (optional) - Example: addEventName="headerAddButtonEvent"
+* close (optional) - Example: close="true"
+* closeEventName (optional) - Example: closeEventName="headerCloseButtonEvent"
+* done (optional) - Example: done="true"
+* doneEventName (optional) - Example: doneEventName="headerDoneButtonEvent"
+
+
+#### Default
+![confirm default image](examples/images/headers.png)
+
+First Default Menu Example
+```sh
+{{fxos-header 
+    title="Messages"
+    edit="true"
+    editEventName="headerEditButtonEvent"
+    add="true"
+    addEventName="headerAddButtonEvent"
+}}
+```
+
+Second Default Menu Example
+```sh
+{{fxos-header 
+    title="Inbox"
+    title_count="2"
+    menu="true"
+    add="true"
+    addEventName="headerAddButtonEvent"
+}}
+```
+
+Third Default Menu Example
+```sh
+{{fxos-header 
+    title="Title"
+    subheader_text="Subheader text"
+    close="true"
+    closeEventName="headerCloseButtonEvent"
+    done="true"
+    doneEventName="headerDoneButtonEvent"
+}}
+```
+
+#### Skins
+![confirm default image](examples/images/headers-dark.png)
+
+First Skinned Menu Example
+```sh
+{{fxos-header
+    class="skin-dark"
+    title="Song title"
+    back="true"
+    backEventName="headerBackButtonEvent"
+}}
+```
+
+Second Skinned Menu Example
+```sh
+{{fxos-header 
+    class="skin-organic"
+    title="Settings"
+    back="true"
+    backEventName="headerBackButtonEvent"
+}}
+```
+
+
+
 TODO
 * Action menu - switch to events instead of action wiring
 * Button - dark style

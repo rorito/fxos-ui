@@ -1,0 +1,20 @@
+<link href="/bower_components/building-blocks/style/headers.css" rel="stylesheet" type="text/css">
+
+<section {{bind-attr class="class"}} role="region">
+    <header>
+        {{#if menu}} <button {{action "menuButton"}}><span class="icon icon-menu">menu</span></button>{{/if}}
+        {{#if close}}<button {{action "closeButton"}}><span class="icon icon-close">close</span></button>{{/if}}
+        {{#if back}}<a href="#" {{action "backButton"}}><span class="icon icon-back">back</span></a>{{/if}}
+        <menu type="toolbar">
+            {{#if edit}}<a href="#" {{action "editButton"}}><span class="icon icon-edit">edit</span></a>{{/if}}
+            {{#if add}}<a href="#" {{action "addButton"}}><span class="icon icon-add">add</span></a>{{/if}}
+            {{#if done}}<button {{action "doneButton"}}>done</button>{{/if}}
+        </menu>
+        <h1>{{title}} {{#if title_count}}<em>({{title_count}})</em>{{/if}} </h1>
+    </header>
+    {{#if subheader_text}}
+    <header>
+        <h2>{{subheader_text}}</h2>
+    </header>
+    {{/if}}
+</section>
